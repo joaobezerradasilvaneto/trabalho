@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Projeto</string>
+    
     <string name="cpf">CPF</string>
     <string name="endere_o">Endereço</string>
     <string name="cancelar">Cancelar</string>
@@ -8,4 +9,9 @@
     <string name="n_de_dependentes">Nº De Dependentes</string>
     <string name="cnh">CNH</string>
     <string name="nome">Nome</string>
+    <string name="Btsalvar">Salvar</string>
+    <string name="cadastrar_funcionario">Cadastrar Funcionario</string>
+    <string name="cadastrar_veiculo">Cadastrar Veiculo</string>
+    <string name="efetuar_loca_o">Efetuar locação</string>
+
 </resources>
