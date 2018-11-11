@@ -13,5 +13,6 @@
     <string name="cadastrar_funcionario">Cadastrar Funcionario</string>
     <string name="cadastrar_veiculo">Cadastrar Veiculo</string>
     <string name="efetuar_loca_o">Efetuar locação</string>
+    <string name="sair">Sair</string>
 
 </resources>
