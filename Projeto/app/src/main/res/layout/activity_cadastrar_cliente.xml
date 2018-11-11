@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".telas.cadastrar_cliente">
+    tools:context=".telas.cadastrar_cliente"
+    tools:layout_editor_absoluteY="81dp">
 
     <EditText
         android:id="@+id/edNome"
@@ -23,15 +24,12 @@
         android:id="@+id/edCPF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="153dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="153dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/cpf"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edNome" />
 
@@ -39,16 +37,12 @@
         android:id="@+id/edEndereco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="153dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="153dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/endere_o"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edRG" />
 
@@ -56,12 +50,11 @@
         android:id="@+id/btCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
-        android:layout_marginLeft="172dp"
-        android:layout_marginStart="172dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
         android:text="@string/cancelar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/btSalvar"
+        app:layout_constraintEnd_toStartOf="@+id/btSalvar" />
 
     <Button
         android:id="@+id/btSalvar"
@@ -69,28 +62,21 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginLeft="19dp"
         android:layout_marginRight="17dp"
-        android:layout_marginStart="19dp"
         android:text="@string/salvar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/btCancelar" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/edRG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="153dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="153dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="19dp"
         android:ems="10"
         android:hint="@string/rg"
         android:inputType="textPersonName|number"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edCPF" />
 
@@ -98,15 +84,12 @@
         android:id="@+id/edDependentes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="153dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="153dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="19dp"
         android:ems="10"
         android:hint="@string/n_de_dependentes"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edEndereco" />
 
@@ -114,15 +97,12 @@
         android:id="@+id/edCNH"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="153dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginRight="153dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="@string/cnh"
         android:inputType="number"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edDependentes" />
 </android.support.constraint.ConstraintLayout>
