@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.brunab.projeto.R;
+import com.example.brunab.projeto.tela_Funcionario;
 
 public class    MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,12 @@ public class    MainActivity extends AppCompatActivity {
     public void cadastracliente(View view){
         Intent it = new Intent(MainActivity.this,cadastrar_cliente.class);
         startActivity(it);
+    }
+    public void telafuncionario(View view){
+        Intent it = new Intent(MainActivity.this, tela_Funcionario.class);
+        startActivity(it);
+
+
     }
 
 }
