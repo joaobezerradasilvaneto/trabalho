@@ -18,5 +18,14 @@ public class    MainActivity extends AppCompatActivity {
         Intent it = new Intent(MainActivity.this,cadastrar_cliente.class);
         startActivity(it);
     }
+    public void telafuncionario(View view){
+        Intent it = new Intent(MainActivity.this, tela_Funcionario.class);
+        startActivity(it);
+
+
+    }
+    public void sair(View view){
+        finish();
+    }
 
 }
