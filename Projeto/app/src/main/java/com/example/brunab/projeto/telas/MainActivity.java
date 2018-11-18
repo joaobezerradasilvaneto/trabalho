@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.brunab.projeto.R;
-import com.example.brunab.projeto.tela_Funcionario;
 
 public class    MainActivity extends AppCompatActivity {
 
@@ -24,6 +23,9 @@ public class    MainActivity extends AppCompatActivity {
         startActivity(it);
 
 
+    }
+    public void sair(View view){
+        finish();
     }
 
 }

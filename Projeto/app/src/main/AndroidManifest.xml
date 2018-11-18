@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".telas.cadastrar_cliente" />
-        <activity android:name=".tela_Funcionario"></activity>
+        <activity android:name=".telas.tela_Funcionario" />
+        <activity android:name=".telas.tela_cadastro_carro"></activity>
     </application>
 
 </manifest>

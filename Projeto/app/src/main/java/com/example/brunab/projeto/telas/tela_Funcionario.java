@@ -1,4 +1,4 @@
-package com.example.brunab.projeto;
+package com.example.brunab.projeto.telas;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.brunab.projeto.R;
 import com.example.brunab.projeto.telas.MainActivity;
 
 public class tela_Funcionario extends AppCompatActivity {
