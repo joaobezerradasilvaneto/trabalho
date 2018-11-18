@@ -6,12 +6,15 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.brunab.projeto.R;
+import com.example.brunab.projeto.dao.database;
 import com.example.brunab.projeto.entidade.Cliente;
 
 public class cadastrar_cliente extends AppCompatActivity {
      private Button btSalvar;
      private Button btCancelar;
      private Cliente cliente;
+
+     database BancoBD;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
