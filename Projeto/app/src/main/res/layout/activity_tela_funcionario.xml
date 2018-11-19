@@ -9,7 +9,7 @@
 
 
     <EditText
-        android:id="@+id/edNomeCarro"
+        android:id="@+id/edNomeFuncionario"
         android:layout_width="216dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
@@ -19,24 +19,24 @@
         android:ems="10"
         android:hint="Nome"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
+        app:layout_constraintBottom_toTopOf="@+id/edCPFfuncionario"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/edRG"
+        android:id="@+id/edRGfuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="17dp"
         android:ems="10"
         android:hint="RG"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edEndereco"
-        app:layout_constraintStart_toStartOf="@+id/editText6"
-        app:layout_constraintTop_toBottomOf="@+id/editText6" />
+        app:layout_constraintBottom_toTopOf="@+id/edEnderecofuncionario"
+        app:layout_constraintStart_toStartOf="@+id/edCPFfuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/edCPFfuncionario" />
 
     <EditText
-        android:id="@+id/edEndereco"
+        android:id="@+id/edEnderecofuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
@@ -44,8 +44,8 @@
         android:hint="Endereco"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/edCargo"
-        app:layout_constraintStart_toStartOf="@+id/edRG"
-        app:layout_constraintTop_toBottomOf="@+id/edRG" />
+        app:layout_constraintStart_toStartOf="@+id/edRGfuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/edRGfuncionario" />
 
     <EditText
         android:id="@+id/edCargo"
@@ -56,9 +56,9 @@
         android:hint="@string/cargo"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btSalvar"
-        app:layout_constraintEnd_toEndOf="@+id/edEndereco"
-        app:layout_constraintStart_toStartOf="@+id/edEndereco"
-        app:layout_constraintTop_toBottomOf="@+id/edEndereco" />
+        app:layout_constraintEnd_toEndOf="@+id/edEnderecofuncionario"
+        app:layout_constraintStart_toStartOf="@+id/edEnderecofuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/edEnderecofuncionario" />
 
     <Button
         android:id="@+id/btSalvar"
@@ -76,7 +76,7 @@
         android:layout_width="130dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:onClick="acaocCancela"
+        android:onClick="acaoCancela"
         android:text="Cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -84,16 +84,16 @@
         app:layout_constraintTop_toBottomOf="@+id/btSalvar" />
 
     <EditText
-        android:id="@+id/editText6"
+        android:id="@+id/edCPFfuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="19dp"
         android:ems="10"
         android:hint="CPF"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/edRG"
-        app:layout_constraintStart_toStartOf="@+id/edNomeCarro"
-        app:layout_constraintTop_toBottomOf="@+id/edNomeCarro" />
+        app:layout_constraintBottom_toTopOf="@+id/edRGfuncionario"
+        app:layout_constraintStart_toStartOf="@+id/edNomeFuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/edNomeFuncionario" />
 
 
 </android.support.constraint.ConstraintLayout>

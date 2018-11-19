@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class Funcionario extends Pessoa {
 
-    private Date datadeAdimissao;
+    private Date datadeAdmissao;
     private Date datadeDemissao;
     private boolean supervisor;
 

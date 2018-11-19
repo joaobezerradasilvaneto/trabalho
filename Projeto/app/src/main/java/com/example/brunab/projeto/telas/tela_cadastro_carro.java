@@ -50,6 +50,13 @@ public class tela_cadastro_carro extends AppCompatActivity {
     public void inserir(){
         ContentValues campos= new ContentValues();
         campos.put("NOME",carro.getNome());
+        campos.put("MARCA",carro.getMarca());
+        campos.put("MODELO",carro.getModelo());
+        campos.put("VALORDOSEGURO",carro.getValorSeguro());
+        campos.put("VALORDALOCACAO",carro.getValorLocacao());
+        campos.put("COR",carro.getCor());
+        campos.put("ATIVO",carro.getAtivo());
+        campos.put("PLACA",carro.getPlaca());
 
     }
 

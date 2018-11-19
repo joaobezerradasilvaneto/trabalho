@@ -53,7 +53,7 @@ public class cadastrar_cliente extends AppCompatActivity {
         campos.put("RG",cliente.getRg());
         campos.put("ENDERECO",cliente.getEndereco());
         campos.put("CNH",cliente.getCnh());
-        campos.put("DEPENDENTES",cliente.getNumeroDeDependentes());
+        campos.put("NUMERODEDEPENDENTES",cliente.getNumeroDeDependentes());
     }
 
 
