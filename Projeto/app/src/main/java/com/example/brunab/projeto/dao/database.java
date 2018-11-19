@@ -15,17 +15,19 @@ public class database extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        String sql= "CREATE TABLE IF NOT EXISTS CLIENTES(" +
+
+        StringBuilder sb = new StringBuilder();
+
+
+        sb.append("CREATE TABLE IF NOT EXISTS CLIENTES(" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "NOME VARCHAR(30)," +
                 "CPF VARCHAR(11)," +
                 "ENDERECO VARCHAR(50),"+
                 "DEPENDENTES INTEGER,"+
-                "CNH VARCHAR(13));";
+                "CNH VARCHAR(13));");
 
-        sqLiteDatabase.execSQL(sql);
-
-
+        sqLiteDatabase.execSQL(sb.toString());
 
     }
 

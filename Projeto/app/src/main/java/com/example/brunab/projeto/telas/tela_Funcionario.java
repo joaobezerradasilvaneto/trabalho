@@ -19,7 +19,6 @@ public class tela_Funcionario extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_funcionario);
 
-
     }
     public void acaocCancela (View view){
         finish();
