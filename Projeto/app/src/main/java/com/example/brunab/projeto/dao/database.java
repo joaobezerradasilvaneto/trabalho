@@ -18,60 +18,56 @@ public class database extends SQLiteOpenHelper{
 
         StringBuilder sb = new StringBuilder();
 
+//--Alteração do sql para INTEGER, NOT NULL, PRIMARY KEY AUTOINCREMENT
+         sb.append(
+                 CREATE TABLE 'Carro' (
+                'IDCARRO' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                'NOME' VARCHAR(40) NULL,
+                'MARCA' VARCHAR(40) NULL,
+                'MODELO' VARCHAR(40) NULL,
+                'VALORDOSEGURO' FLOAT,
+                'VALORDALOCACAO' FLOAT,
+                'COR' VARCHAR(40) NULL,
+                'ATIVO' BOOLEAN);
 
-         sb.append("CREATE TABLE 'Carro' (\n" +
-                "  'IDCARRO' INT NOT NULL,\n" +
-                "  'NOME' VARCHAR(40) NULL,\n" +
-                "  'MARCA' VARCHAR(40) NULL,  \n" +
-                "  'MODELO' VARCHAR(40) NULL,\n" +
-                "  'VALORDOSEGURO' FLOAT,  \n" +
-                "  'VALORDALOCACAO' FLOAT,  \n" +
-                "  'COR' VARCHAR(40) NULL,\n" +
-                "  'ATIVO' BOOLEAN,\n" +
-                "   PRIMARY KEY ('IDCARRO'));\n" +
+                CREATE TABLE 'Cliente' (
+                'IDCLIENTE' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                'RG' VARCHAR(11) NULL,
+                'CPF' VARCHAR(11) NULL,
+                'NOME' VARCHAR(40) NULL,
+                'ENDERECO' VARCHAR(50) NULL,
+                'CNH' VARCHAR(11) NULL,
+                'NUMERODEDEPENDENTES' INT NULL);
 
-                "CREATE TABLE 'Cliente' (\n" +
-                "  'IDCLIENTE' INT NOT NULL,\n" +
-                "  'RG' VARCHAR(11) NULL,\n" +
-                "  'CPF' VARCHAR(11) NULL,\n" +
-                "  'NOME' VARCHAR(40) NULL,\n" +
-                "  'ENDERECO' VARCHAR(50) NULL,\n" +
-                "  'CNH' VARCHAR(11) NULL,\n" +
-                "  'NUMERODEDEPENDENTES' INT NULL,\n" +
-                "  PRIMARY KEY ('IDCLIENTE'));\n" +
+                CREATE TABLE 'Funcionario' (
+                'IDFUNCIONARIO' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                'RG' VARCHAR(11) NULL,
+                'CPF' VARCHAR(11) NULL,
+                'NOME' VARCHAR(40) NULL,
+                'ENDERECO' VARCHAR(50) NULL,
+                'DATADEADMISSAO' DATE NULL,
+                'DATADEDEMISSAO' DATE NULL,
+                'SUPERVISOR' BOOLEAN);
 
-                "CREATE TABLE 'Funcionario' (\n" +
-                "  'IDFUNCIONARIO' INT NOT NULL,\n" +
-                "  'RG' VARCHAR(11) NULL,\n" +
-                "  'CPF' VARCHAR(11) NULL,\n" +
-                "  'NOME' VARCHAR(40) NULL,\n" +
-                "  'ENDERECO' VARCHAR(50) NULL,\n" +
-                "  'DATADEADMISSAO' DATE NULL,\n" +
-                "  'DATADEDEMISSAO' DATE NULL,\n" +
-                "  'SUPERVISOR' BOOLEAN,\n" +
-                "  PRIMARY KEY ('IDFUNCIONARIO'));\n" +
+                 CREATE TABLE 'Locacao' (
+                'IDLOCACAO' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                'NOME' VARCHAR(40) NULL,
+                'MARCA' VARCHAR(40) NULL,
+                'MODELO' VARCHAR(40) NULL,
+                'VALORDOSEGURO' FLOAT,
+                'VALORDALOCACAO' FLOAT,
+                'COR' VARCHAR(40) NULL,
+                'ATIVO' BOOLEAN,
+                'DATADELOCACAO' DATE NULL,
+                'DATADEDEVOLUCAO' DATE NULL,
+                'QUILOMETRAGEM' FLOAT);
 
-                "CREATE TABLE 'Locacao' (\n" +
-                "  'IDLOCACAO' INT NOT NULL,\n" +
-                "  'NOME' VARCHAR(40) NULL,\n" +
-                "  'MARCA' VARCHAR(40) NULL,  \n" +
-                "  'MODELO' VARCHAR(40) NULL,\n" +
-                "  'VALORDOSEGURO' FLOAT,  \n" +
-                "  'VALORDALOCACAO' FLOAT,  \n" +
-                "  'COR' VARCHAR(40) NULL,\n" +
-                "  'ATIVO' BOOLEAN,\n" +
-                "  'DATADELOCACAO' DATE NULL,\n" +
-                "  'DATADEDEVOLUCAO' DATE NULL,\n" +
-                "  'QUILOMETRAGEM' FLOAT, \n" +
-                "   PRIMARY KEY ('IDLOCACAO'));\n" +
-
-                "CREATE TABLE 'Pessoa' (\n" +
-                "  'IDPESSOA' INT NOT NULL,\n" +
-                "  'RG' VARCHAR(11) NULL,\n" +
-                "  'CPF' VARCHAR(11) NULL,\n" +
-                "  'NOME' VARCHAR(40) NULL,\n" +
-                "  'ENDERECO' VARCHAR(50) NULL,\n" +
-                "  PRIMARY KEY ('IDPESSOA'));");
+                CREATE TABLE 'Pessoa' (
+                'IDPESSOA' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+                'RG' VARCHAR(11) NULL,
+                'CPF' VARCHAR(11) NULL,
+                'NOME' VARCHAR(40) NULL,
+                'ENDERECO' VARCHAR(50) NULL););
 
         sqLiteDatabase.execSQL(sb.toString());
 
