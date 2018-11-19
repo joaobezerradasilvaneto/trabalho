@@ -33,7 +33,6 @@ public class tela_cadastro_carro extends AppCompatActivity {
         edValorlocacao = findViewById(R.id.edValorlocacao);
         edValorseguro = findViewById(R.id.edValorseguro);
         cbAtivo = findViewById(R.id.cbVeiculoativo);
-        
     }
 
     public void acaoSalvar(){
