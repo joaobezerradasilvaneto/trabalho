@@ -27,5 +27,9 @@ public class    MainActivity extends AppCompatActivity {
     public void sair(View view){
         finish();
     }
+    public void telacadastrodeveiculo(View view){
+        Intent it = new Intent(MainActivity.this,tela_cadastro_carro.class);
+        startActivity(it);
+    }
 
 }

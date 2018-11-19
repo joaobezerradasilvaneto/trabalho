@@ -7,7 +7,7 @@
     tools:context=".telas.tela_cadastro_carro">
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edPlaca"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edNome"
         android:layout_width="368dp"
         android:layout_height="47dp"
         android:layout_marginEnd="16dp"
@@ -36,10 +36,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/edPlaca" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edMarca"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -52,10 +52,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/edNome" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edModelo"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -68,10 +68,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/edMarca" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/edCor"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -84,10 +84,10 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/edModelo" />
 
     <EditText
-        android:id="@+id/editText7"
+        android:id="@+id/edValorlocacao"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -100,10 +100,10 @@
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText5" />
+        app:layout_constraintTop_toBottomOf="@+id/edCor" />
 
     <EditText
-        android:id="@+id/editText8"
+        android:id="@+id/edValorseguro"
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -116,10 +116,10 @@
         android:inputType="numberDecimal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+        app:layout_constraintTop_toBottomOf="@+id/edValorlocacao" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/cbVeiculoativo"
         android:layout_width="143dp"
         android:layout_height="42dp"
         android:layout_marginLeft="16dp"
@@ -127,10 +127,10 @@
         android:layout_marginTop="9dp"
         android:text="Veiculo ativo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintTop_toBottomOf="@+id/edValorseguro" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btSalvarveiculo"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -139,12 +139,12 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/salvar"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintEnd_toStartOf="@+id/btCancelarveiculo"
+        app:layout_constraintStart_toEndOf="@+id/cbVeiculoativo"
+        app:layout_constraintTop_toBottomOf="@+id/edValorseguro" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btCancelarveiculo"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -154,7 +154,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/cancelar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
-        app:layout_constraintTop_toBottomOf="@+id/editText8" />
+        app:layout_constraintStart_toEndOf="@+id/btSalvarveiculo"
+        app:layout_constraintTop_toBottomOf="@+id/edValorseguro" />
 
 </android.support.constraint.ConstraintLayout>
