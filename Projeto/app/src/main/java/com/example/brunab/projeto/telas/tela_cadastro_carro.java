@@ -1,6 +1,7 @@
 package com.example.brunab.projeto.telas;
 
 import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.CheckBox;
@@ -47,6 +48,7 @@ public class tela_cadastro_carro extends AppCompatActivity {
 
     }
 
+    private SQLiteDatabase db;
     public void inserir(){
         ContentValues campos= new ContentValues();
         campos.put("NOME",carro.getNome());
@@ -57,7 +59,14 @@ public class tela_cadastro_carro extends AppCompatActivity {
         campos.put("COR",carro.getCor());
         campos.put("ATIVO",carro.getAtivo());
         campos.put("PLACA",carro.getPlaca());
+        /*if(.getId()<=0)
+            db.insertOrThrow("VEICULO",null,campos);
+        else
+            db.update("VEICULO",campos,
+                    "ID=?",new String[]{veiculo.getId()+""});
 
+        db.close();
+        */
     }
 
 

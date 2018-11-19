@@ -1,10 +1,10 @@
 package com.example.brunab.projeto.entidade;
 
 public class Pessoa {
-    String rg;
-    String cpf;
-    String nome;
-    String endereco;
+    private String rg;
+    private String cpf;
+    private String nome;
+    private String endereco;
     
     public String getRg() {
         return rg;

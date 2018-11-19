@@ -1,8 +1,21 @@
 package com.example.brunab.projeto.entidade;
 
-public class Cliente extends Pessoa{
-    String cnh;
-    int numeroDeDependentes;
+import java.io.Serializable;
+
+public class Cliente extends Pessoa implements Serializable{
+    private String cnh;
+    private Integer numeroDeDependentes;
+    private Integer id;
+
+    public Cliente(){id=0;};
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getCnh() {
         return cnh;

@@ -1,15 +1,28 @@
 package com.example.brunab.projeto.entidade;
 
-public class Carro {
-    String placa;
-    String nome;
-    String modelo;
-    String marca;
-    Float valorSeguro;
-    Float valorLocacao;
-    String cor;
-    Boolean ativo;
+import java.io.Serializable;
 
+public class Carro implements Serializable{
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    private String placa;
+    private String nome;
+    private String modelo;
+    private String marca;
+    private Float valorSeguro;
+    private Float valorLocacao;
+    private String cor;
+    private Boolean ativo;
+
+    public Carro(){id=0;};
 
     public String getMarca() {
         return marca;
