@@ -23,6 +23,11 @@ public class cadastrar_cliente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_cliente);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         edNome = findViewById(R.id.edNome);
         edCPF = findViewById(R.id.edCPF);
         edRG = findViewById(R.id.edRG);

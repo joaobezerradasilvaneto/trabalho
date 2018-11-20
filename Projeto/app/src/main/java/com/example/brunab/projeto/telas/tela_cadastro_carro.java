@@ -26,6 +26,11 @@ public class tela_cadastro_carro extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tela_cadastro_carro);
+
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
+
         edNome=findViewById(R.id.edNomeCarro);
         edPlaca = findViewById(R.id.edPlaca);
         edMarca = findViewById(R.id.edMarca);
