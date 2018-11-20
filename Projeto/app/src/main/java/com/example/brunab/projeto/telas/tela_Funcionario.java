@@ -15,12 +15,12 @@ import com.example.brunab.projeto.entidade.Funcionario;
 import com.example.brunab.projeto.telas.MainActivity;
 
 public class tela_Funcionario extends AppCompatActivity {
-    Funcionario funcionario;
-    EditText edNome;
-    EditText edCpf;
-    EditText edRG;
-    EditText edEndereco;
-    EditText edCargo;
+    private Funcionario funcionario;
+    private EditText edNome;
+    private EditText edCpf;
+    private EditText edRG;
+    private EditText edEndereco;
+
 
     private SQLiteDatabase db;
     database daoBD;
@@ -35,22 +35,30 @@ public class tela_Funcionario extends AppCompatActivity {
         edCpf = findViewById(R.id.edCPFfuncionario);
         edRG = findViewById(R.id.edRGfuncionario);
         edEndereco = findViewById(R.id.edEnderecofuncionario);
-        edCargo = findViewById(R.id.edCargo);
 
 
+        funcionario = (Funcionario) getIntent().getSerializableExtra("funcionario");
+        if (funcionario != null){
+            edNome.setText(funcionario.getNome()+"");
+            edCpf.setText(funcionario.getCpf()+"");
+            edRG.setText(funcionario.getRg()+"");
+            edEndereco.setText(funcionario.getEndereco()+"");
+        }
     }
     public void acaoCancela (View view){
         finish();
     }
 
-
     public void acaoSalvar(View view){
-    funcionario.setNome(edNome.getText().toString());
-    funcionario.setCpf(edCpf.getText().toString());
-    funcionario.setEndereco(edEndereco.getText().toString());
-    funcionario.setRg(edRG.getText().toString());
-    inserir();
-    finish();
+        if(funcionario != null){
+            funcionario = new Funcionario();
+        }
+        funcionario.setNome(edNome.getText().toString());
+        funcionario.setCpf(edCpf.getText().toString());
+        funcionario.setEndereco(edEndereco.getText().toString());
+        funcionario.setRg(edRG.getText().toString());
+        inserir();
+        finish();
     }
 
     public void inserir(){
@@ -60,6 +68,12 @@ public class tela_Funcionario extends AppCompatActivity {
         campos.put("CPF",funcionario.getCpf());
         campos.put("ENDERECO",funcionario.getEndereco());
 
+        if (funcionario.getIdFuncionario()<=0)
+            db.insertOrThrow("Funcionario", null, campos);
+        else
+            db.update("Funcionario", campos, "IDFUNCIONARIO=?", new String[]{funcionario.getIdFuncionario()+""});
+
+        db.close();
     }
 
 

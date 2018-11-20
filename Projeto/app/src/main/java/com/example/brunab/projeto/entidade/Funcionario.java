@@ -5,20 +5,27 @@ import java.util.Date;
 
 public class Funcionario extends Pessoa implements Serializable{
 
-    private Integer id;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     private Date datadeAdmissao;
     private Date datadeDemissao;
     private boolean supervisor;
 
-    public Funcionario(){id=0;};
+    private Integer idFuncionario;
+
+    public Funcionario(){idFuncionario=0;}
+
+    public Integer getIdFuncionario() {
+        return idFuncionario;
+    }
+
+    public void setIdFuncionario(Integer idFuncionario) {
+        this.idFuncionario = idFuncionario;
+    }
+
+
+    public String toString(){
+        return String.format("Nome: \n CPF: \n RG: \n Endereco: ", getNome(),getCpf(),getRg(),getEndereco());
+    }
+
 
 }
+

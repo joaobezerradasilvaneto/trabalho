@@ -4,6 +4,7 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
@@ -34,6 +35,8 @@ public class tela_cadastro_carro extends AppCompatActivity {
         edValorseguro = findViewById(R.id.edValorseguro);
         cbAtivo = findViewById(R.id.cbVeiculoativo);
     }
+
+    public void acaocancel(View view){finish();}
 
     public void acaoSalvar(){
         carro.setNome(edNome.getText().toString());

@@ -13,12 +13,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="@string/nome"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="22sp"/>
 
     <EditText
         android:id="@+id/edCPF"
@@ -31,7 +32,8 @@
         android:hint="@string/cpf"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edNome" />
+        app:layout_constraintTop_toBottomOf="@+id/edNome"
+        android:textSize="22sp"/>
 
     <EditText
         android:id="@+id/edEndereco"
@@ -44,29 +46,35 @@
         android:hint="@string/endere_o"
         android:inputType="text"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edRG" />
+        app:layout_constraintTop_toBottomOf="@+id/edRG"
+        android:textSize="22sp"/>
 
     <Button
         android:id="@+id/btCancelar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginRight="12dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_corner_button"
         android:onClick="acaoCancelar"
         android:text="@string/cancelar"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btSalvar"
-        app:layout_constraintEnd_toStartOf="@+id/btSalvar" />
+        android:textColor="@color/corBranca"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
 
     <Button
         android:id="@+id/btSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginRight="11dp"
+        android:background="@drawable/round_corner_button"
         android:text="@string/salvar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textColor="@color/corBranca"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btCancelar"
+        app:layout_constraintEnd_toStartOf="@+id/btCancelar" />
 
     <EditText
         android:id="@+id/edRG"
@@ -74,12 +82,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:hint="@string/rg"
         android:inputType="textPersonName|number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edCPF" />
+        app:layout_constraintTop_toBottomOf="@+id/edCPF"
+        android:textSize="22sp"/>
 
     <EditText
         android:id="@+id/edDependentes"
@@ -87,12 +96,13 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="18dp"
         android:ems="10"
         android:hint="@string/n_de_dependentes"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edEndereco" />
+        app:layout_constraintTop_toBottomOf="@+id/edEndereco"
+        android:textSize="22sp"/>
 
     <EditText
         android:id="@+id/edCNH"
@@ -105,5 +115,6 @@
         android:hint="@string/cnh"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edDependentes" />
+        app:layout_constraintTop_toBottomOf="@+id/edDependentes"
+        android:textSize="22sp"/>
 </android.support.constraint.ConstraintLayout>
