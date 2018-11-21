@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo"
     tools:context=".telas.cadastrar_cliente"
     tools:layout_editor_absoluteY="81dp">
 
@@ -17,6 +18,7 @@
         android:ems="10"
         android:hint="@string/nome"
         android:inputType="textPersonName"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="22sp"/>
@@ -31,6 +33,7 @@
         android:ems="10"
         android:hint="@string/cpf"
         android:inputType="number"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edNome"
         android:textSize="22sp"/>
@@ -45,36 +48,40 @@
         android:ems="10"
         android:hint="@string/endere_o"
         android:inputType="text"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edRG"
         android:textSize="22sp"/>
 
     <Button
         android:id="@+id/btCancelar"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:background="@drawable/round_corner_button"
         android:onClick="acaoCancelar"
         android:text="@string/cancelar"
         android:textColor="@color/corBranca"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btSalvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:layout_marginRight="11dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="172dp"
         android:background="@drawable/round_corner_button"
         android:text="@string/salvar"
         android:textColor="@color/corBranca"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btCancelar"
-        app:layout_constraintEnd_toStartOf="@+id/btCancelar" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btCancelar"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/edRG"
@@ -86,6 +93,7 @@
         android:ems="10"
         android:hint="@string/rg"
         android:inputType="textPersonName|number"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edCPF"
         android:textSize="22sp"/>
@@ -100,8 +108,10 @@
         android:ems="10"
         android:hint="@string/n_de_dependentes"
         android:inputType="number"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edEndereco"
+
         android:textSize="22sp"/>
 
     <EditText
@@ -114,6 +124,7 @@
         android:ems="10"
         android:hint="@string/cnh"
         android:inputType="number"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edDependentes"
         android:textSize="22sp"/>
