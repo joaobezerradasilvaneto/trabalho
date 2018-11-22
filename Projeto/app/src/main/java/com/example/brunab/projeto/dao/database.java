@@ -75,10 +75,6 @@ public class database extends SQLiteOpenHelper{
 
         sqLiteDatabase.execSQL(sb.toString());
 
-
-
-        sqLiteDatabase.execSQL(sb.toString());
-
     }
 
     @Override

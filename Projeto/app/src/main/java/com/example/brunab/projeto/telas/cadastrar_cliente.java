@@ -1,10 +1,13 @@
 package com.example.brunab.projeto.telas;
 
 import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
+
 
 import com.example.brunab.projeto.R;
 import com.example.brunab.projeto.entidade.Cliente;
@@ -18,6 +21,7 @@ public class cadastrar_cliente extends AppCompatActivity {
      private EditText edEndereco;
      private EditText edCNH;
      private EditText edDependentes;
+     private SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,8 +63,15 @@ public class cadastrar_cliente extends AppCompatActivity {
         campos.put("ENDERECO",cliente.getEndereco());
         campos.put("CNH",cliente.getCnh());
         campos.put("NUMERODEDEPENDENTES",cliente.getNumeroDeDependentes());
+
+        if(cliente.getId()<=0)
+            db.insertOrThrow("Cliente",null,campos);
+        else
+            db.update("Cliente",campos,"IDCLIENTE=?",new String[]{cliente.getId()+""});
+
+        db.close();
+
+        Toast.makeText(getApplicationContext(), "Hello World!", Toast.LENGTH_LONG).show();
     }
-
-
 
 }
