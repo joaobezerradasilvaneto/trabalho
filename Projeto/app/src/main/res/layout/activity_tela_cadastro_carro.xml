@@ -155,6 +155,7 @@
         android:layout_marginRight="32dp"
         android:layout_marginStart="172dp"
         android:background="@drawable/round_corner_button"
+        android:onClick="acaoSalvar"
         android:text="@string/salvar"
         android:textColor="@color/corBranca"
         app:layout_constraintBottom_toBottomOf="parent"
