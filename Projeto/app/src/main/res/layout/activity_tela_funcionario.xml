@@ -114,7 +114,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/data_admissao"
-        android:inputType="textPersonName"
+        android:inputType="date"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edCargo" />
@@ -126,7 +126,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="@string/data_demiss_o"
-        android:inputType="textPersonName"
+        android:inputType="date"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/checkBoxSupervisor"
         app:layout_constraintTop_toBottomOf="@+id/edDataAdmissao" />

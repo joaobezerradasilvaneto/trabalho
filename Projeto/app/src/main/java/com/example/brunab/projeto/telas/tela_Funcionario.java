@@ -16,6 +16,8 @@ import com.example.brunab.projeto.dao.database;
 import com.example.brunab.projeto.entidade.Funcionario;
 import com.example.brunab.projeto.telas.MainActivity;
 
+import java.util.Date;
+
 public class tela_Funcionario extends AppCompatActivity {
     private Funcionario funcionario;
     private EditText edNome;
@@ -50,8 +52,8 @@ public class tela_Funcionario extends AppCompatActivity {
         edAdmissao = findViewById(R.id.edDataAdmissao);
         edDemissao = findViewById(R.id.edDataDemissao);
 
-    /*
-        funcionario = (Funcionario) getIntent().getSerializableExtra("funcionario");
+
+        funcionario = (Funcionario) getIntent().getSerializableExtra("FUNCIONARIO");
         if (funcionario != null){
             edNome.setText(funcionario.getNome()+"");
             edCpf.setText(funcionario.getCpf()+"");
@@ -59,7 +61,7 @@ public class tela_Funcionario extends AppCompatActivity {
             edEndereco.setText(funcionario.getEndereco()+"");
             edcargo.setText(funcionario.getCargo());
         }
-        */
+
     }
     public void acaoCancela (View view){
         finish();
@@ -75,6 +77,9 @@ public class tela_Funcionario extends AppCompatActivity {
             funcionario.setCpf(edCpf.getText().toString());
             funcionario.setEndereco(edEndereco.getText().toString());
             funcionario.setRg(edRG.getText().toString());
+            funcionario.setCargo(edcargo.getText().toString());
+            funcionario.setDatadeAdmissao(new Date(edAdmissao.getText().toString()));
+           // funcionario.setDatadeDemissao(Date.parse(edDemissao.toString());
             inserirFuncionario();
             finish();
         }
@@ -82,23 +87,7 @@ public class tela_Funcionario extends AppCompatActivity {
 
     }
 
-    /*public void inserir(){
-        ContentValues campos= new ContentValues();
-        campos.put("NOME",funcionario.getNome());
-        campos.put("RG",funcionario.getRg());
-        campos.put("CPF",funcionario.getCpf());
-        campos.put("ENDERECO",funcionario.getEndereco());
-        campos.put("CARGO", funcionario.getCargo());
 
-        if (funcionario.getIdFuncionario()<=0)
-            db.insertOrThrow("Funcionario", null, campos);
-        else
-            db.update("Funcionario", campos, "IDFUNCIONARIO=?", new String[]{funcionario.getIdFuncionario()+""});
-
-        db.close();
-
-    }
-*/
     public void inserirFuncionario(){
 
         try {
@@ -107,6 +96,8 @@ public class tela_Funcionario extends AppCompatActivity {
             campos.put("RG", funcionario.getRg());
             campos.put("CPF", funcionario.getCpf());
             campos.put("ENDERECO", funcionario.getEndereco());
+            campos.put("CARGO",funcionario.getCargo());
+            campos.put("DATADEADMISSAO",funcionario.getDatadeAdmissao().toString());
 
             if (funcionario.getIdFuncionario() <= 0)
                 db.insertOrThrow("FUNCIONARIO", null, campos);
@@ -141,6 +132,19 @@ public class tela_Funcionario extends AppCompatActivity {
             edEndereco.requestFocus();
             return false;
         }
+
+        if(TextUtils.isEmpty(edAdmissao.getText())){
+            Toast.makeText(this,"Entre com a data de admissão",Toast.LENGTH_LONG).show();
+            edAdmissao.requestFocus();
+            return false;
+        }
+
+        if(TextUtils.isEmpty(edcargo.getText())){
+            Toast.makeText(this,"Entre com o cargo",Toast.LENGTH_LONG).show();
+            edcargo.requestFocus();
+            return false;
+        }
+
 
         return true;
 
