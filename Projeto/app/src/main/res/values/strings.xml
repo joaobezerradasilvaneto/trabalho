@@ -16,5 +16,8 @@
     <string name="sair">Sair</string>
     <string name="title_activity_tela_funcionario">telaFuncionario</string>
     <string name="cargo">Cargo</string>
+    <string name="data_demiss_o">Data Demissão</string>
+    <string name="data_admissao">Data Admissao</string>
+    <string name="supervisor">Supervisor</string>
 
 </resources>

@@ -13,12 +13,12 @@
         android:id="@+id/edNomeFuncionario"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Nome"
-        android:textColorHint="@color/colorPrimary"
         android:inputType="textPersonName"
-        android:textSize="22sp"
+        android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/edCPFfuncionario"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,27 +26,27 @@
         android:id="@+id/edRGfuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="RG"
         android:inputType="number"
         android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/edCPFfuncionario"
-        app:layout_constraintTop_toBottomOf="@+id/edCPFfuncionario"
-        android:textSize="22sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/edCPFfuncionario" />
 
     <EditText
         android:id="@+id/edEnderecofuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Endereco"
         android:inputType="textPersonName"
         android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/edRGfuncionario"
-        app:layout_constraintTop_toBottomOf="@+id/edRGfuncionario"
-        android:textSize="22sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/edRGfuncionario" />
 
     <Button
         android:id="@+id/btSalvar"
@@ -84,16 +84,66 @@
         android:id="@+id/edCPFfuncionario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="44dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="CPF"
         android:inputType="number"
         android:textColorHint="@color/colorPrimary"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edNomeFuncionario"
-        android:textSize="22sp"/>
+        app:layout_constraintTop_toBottomOf="@+id/edNomeFuncionario" />
+
+    <CheckBox
+        android:id="@+id/checkBoxSupervisor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/supervisor"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/edEnderecofuncionario"
+        app:layout_constraintTop_toBottomOf="@+id/edDataDemissao" />
+
+    <EditText
+        android:id="@+id/edDataAdmissao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/data_admissao"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edCargo" />
+
+    <EditText
+        android:id="@+id/edDataDemissao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/data_demiss_o"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxSupervisor"
+        app:layout_constraintTop_toBottomOf="@+id/edDataAdmissao" />
+
+    <EditText
+        android:id="@+id/edCargo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/cargo"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edEnderecofuncionario" />
 
 
 </android.support.constraint.ConstraintLayout>

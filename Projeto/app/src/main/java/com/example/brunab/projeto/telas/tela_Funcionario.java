@@ -20,6 +20,9 @@ public class tela_Funcionario extends AppCompatActivity {
     private EditText edCpf;
     private EditText edRG;
     private EditText edEndereco;
+    private EditText edAdmissao;
+    private EditText edDemissao;
+    private EditText edcargo;
 
 
     private SQLiteDatabase db;
@@ -40,6 +43,9 @@ public class tela_Funcionario extends AppCompatActivity {
         edCpf = findViewById(R.id.edCPFfuncionario);
         edRG = findViewById(R.id.edRGfuncionario);
         edEndereco = findViewById(R.id.edEnderecofuncionario);
+        edcargo = findViewById(R.id.edCargo);
+        edAdmissao = findViewById(R.id.edDataAdmissao);
+        edDemissao = findViewById(R.id.edDataDemissao);
 
 
         funcionario = (Funcionario) getIntent().getSerializableExtra("funcionario");
@@ -48,6 +54,7 @@ public class tela_Funcionario extends AppCompatActivity {
             edCpf.setText(funcionario.getCpf()+"");
             edRG.setText(funcionario.getRg()+"");
             edEndereco.setText(funcionario.getEndereco()+"");
+            edcargo.setText(funcionario.getCargo());
         }
     }
     public void acaoCancela (View view){
@@ -62,6 +69,7 @@ public class tela_Funcionario extends AppCompatActivity {
         funcionario.setCpf(edCpf.getText().toString());
         funcionario.setEndereco(edEndereco.getText().toString());
         funcionario.setRg(edRG.getText().toString());
+        funcionario.setCargo(edcargo.getText().toString());
         inserir();
         finish();
     }
@@ -72,6 +80,7 @@ public class tela_Funcionario extends AppCompatActivity {
         campos.put("RG",funcionario.getRg());
         campos.put("CPF",funcionario.getCpf());
         campos.put("ENDERECO",funcionario.getEndereco());
+        campos.put("CARGO", funcionario.getCargo());
 
         if (funcionario.getIdFuncionario()<=0)
             db.insertOrThrow("Funcionario", null, campos);
