@@ -1,11 +1,25 @@
 package com.example.brunab.projeto.entidade;
 
-public class Pessoa {
+import java.io.Serializable;
+
+public class Pessoa implements Serializable{
+
+    private Integer id;
     private String rg;
     private String cpf;
     private String nome;
+    public Pessoa(){id=0;}
     private String endereco;
-    
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getRg() {
         return rg;
     }
