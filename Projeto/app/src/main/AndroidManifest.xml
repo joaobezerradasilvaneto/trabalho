@@ -20,7 +20,8 @@
         <activity android:name=".telas.cadastrar_cliente" />
         <activity android:name=".telas.tela_Funcionario" />
         <activity android:name=".telas.tela_cadastro_carro" />
-        <activity android:name=".telas.tela_locacao"></activity>
+        <activity android:name=".telas.tela_locacao" />
+        <activity android:name=".telas.listarlocacao"></activity>
     </application>
 
 </manifest>
