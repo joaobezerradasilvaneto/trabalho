@@ -74,10 +74,19 @@ public class database extends SQLiteOpenHelper{
         );
 
         sqLiteDatabase.execSQL(sb.toString());
+/*
+        String sql= "CREATE TABLE IF NOT EXISTS CLIENTE(" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "NOME VARCHAR(40)," +
+                "NUMERODEDEPENDENTES INTEGER," +
+                "CNH VARCHAR(11)," +
+                "RG VARCHAR(11)," +
+                "ENDERECO VARCHAR(50)," +
+                "CPF VARCHAR(11));";
+        sqLiteDatabase.execSQL(sql);
 
+*/
 
-
-        sqLiteDatabase.execSQL(sb.toString());
 
     }
 
