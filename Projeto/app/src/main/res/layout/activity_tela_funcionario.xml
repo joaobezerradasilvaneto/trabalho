@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo"
     tools:context=".telas.tela_Funcionario"
     tools:layout_editor_absoluteY="81dp">
 
@@ -15,6 +16,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Nome"
+        android:textColorHint="@color/colorPrimary"
         android:inputType="textPersonName"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="@+id/edCPFfuncionario"
@@ -28,6 +30,7 @@
         android:ems="10"
         android:hint="RG"
         android:inputType="number"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/edCPFfuncionario"
         app:layout_constraintTop_toBottomOf="@+id/edCPFfuncionario"
         android:textSize="22sp"/>
@@ -40,30 +43,36 @@
         android:ems="10"
         android:hint="Endereco"
         android:inputType="textPersonName"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="@+id/edRGfuncionario"
         app:layout_constraintTop_toBottomOf="@+id/edRGfuncionario"
         android:textSize="22sp"/>
 
     <Button
         android:id="@+id/btSalvar"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="160dp"
-        android:layout_marginStart="160dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginLeft="172dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginStart="172dp"
         android:background="@drawable/round_corner_button"
         android:onClick="acaoSalvar"
         android:text="Salvar"
         android:textColor="@color/corBranca"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btCancelar" />
+        android:textColorHint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btCancelar"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btCancelar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:background="@drawable/round_corner_button"
         android:onClick="acaoCancela"
         android:text="Cancelar"
@@ -81,6 +90,7 @@
         android:ems="10"
         android:hint="CPF"
         android:inputType="number"
+        android:textColorHint="@color/colorPrimary"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edNomeFuncionario"
         android:textSize="22sp"/>

@@ -23,7 +23,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="scalingPercent" value="65" />
+                                                <entry key="scalingPercent" value="39" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -34,8 +34,11 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="9f81f7" />
-                                      <entry key="foregroundImage" value="F:\Área de Trabalho\IconeCarro.png" />
+                                      <entry key="backgroundColor" value="8258fa" />
+                                      <entry key="backgroundLayerName" value="ic_launcher_background" />
+                                      <entry key="foregroundImage" value="F:\Área de Trabalho\IconeCliente.png" />
+                                      <entry key="foregroundLayerName" value="ic_launcher_foreground_Cliente" />
+                                      <entry key="outputName" value="ic_launcher_Cliente" />
                                     </map>
                                   </option>
                                 </PersistentState>

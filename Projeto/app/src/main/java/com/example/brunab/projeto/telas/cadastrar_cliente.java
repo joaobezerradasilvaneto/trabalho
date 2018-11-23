@@ -8,7 +8,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.example.brunab.projeto.R;
 import com.example.brunab.projeto.dao.database;
 import com.example.brunab.projeto.entidade.Cliente;
@@ -25,6 +24,7 @@ public class cadastrar_cliente extends AppCompatActivity {
      private EditText edCNH;
      private EditText edDependentes;
      database banco;
+     
 
 
     @Override
@@ -32,7 +32,7 @@ public class cadastrar_cliente extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_cliente);
 
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        //getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
@@ -107,6 +107,7 @@ public class cadastrar_cliente extends AppCompatActivity {
         return true;
     }
 
+
     private SQLiteDatabase db;
     private void inserir(){
 
@@ -131,7 +132,5 @@ public class cadastrar_cliente extends AppCompatActivity {
             Toast.makeText(this,"Erro ao inserir cliente",Toast.LENGTH_LONG).show();
         }
     }
-
-
 
 }

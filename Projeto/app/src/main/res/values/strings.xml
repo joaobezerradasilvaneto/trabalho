@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Projeto</string>
+    <string name="app_name">NomeApp</string>
 
     <string name="cpf">CPF</string>
     <string name="endere_o">Endereço</string>
