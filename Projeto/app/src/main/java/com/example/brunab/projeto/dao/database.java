@@ -15,10 +15,11 @@ public class database extends SQLiteOpenHelper{
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+/*
         StringBuilder sb = new StringBuilder();
 
 //--Alteração do sql para INTEGER, NOT NULL, PRIMARY KEY AUTOINCREMENT
+
         sb.append(
                 "CREATE TABLE 'Carro' (\n" +
                         "'IDCARRO' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,\n" +
@@ -62,20 +63,12 @@ public class database extends SQLiteOpenHelper{
                         "'ATIVO' BOOLEAN, \n" +
                         "'DATADELOCACAO' DATE, \n" +
                         "'DATADEDEVOLUCAO' DATE, \n" +
-                        "'QUILOMETRAGEM' FLOAT);\n" +
-
-                        "CREATE TABLE 'Pessoa' (\n" +
-                        "'IDPESSOA' INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,\n" +
-                        "'RG' VARCHAR(11) NULL,\n" +
-                        "'CPF' VARCHAR(11) NULL,\n" +
-                        "'NOME' VARCHAR(40) NULL,\n" +
-                        "'ENDERECO' VARCHAR(50) NULL);"
-
+                        "'QUILOMETRAGEM' FLOAT);\n"
         );
+         //sqLiteDatabase.execSQL(sb.toString());
+        */
 
-        sqLiteDatabase.execSQL(sb.toString());
-/*
-        String sql= "CREATE TABLE IF NOT EXISTS CLIENTE(" +
+        String sqlcliente= "CREATE TABLE IF NOT EXISTS CLIENTE(" +
                 "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "NOME VARCHAR(40)," +
                 "NUMERODEDEPENDENTES INTEGER," +
@@ -83,9 +76,52 @@ public class database extends SQLiteOpenHelper{
                 "RG VARCHAR(11)," +
                 "ENDERECO VARCHAR(50)," +
                 "CPF VARCHAR(11));";
-        sqLiteDatabase.execSQL(sql);
 
-*/
+        String sqlfuncionario= "CREATE TABLE IF NOT EXISTS FUNCIONARIO(" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "NOME VARCHAR(40)," +
+                "SUPERVISOR BOOLEAN," +
+                "CNH VARCHAR(11)," +
+                "RG VARCHAR(11)," +
+                "DATADEADMISSAO DATE,"+
+                "DATADEDEMISSAO DATE,"+
+                "ENDERECO VARCHAR(50)," +
+                "CPF VARCHAR(11));";
+
+        String sqlcarro= "CREATE TABLE IF NOT EXISTS CARRO(" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "NOME VARCHAR(40)," +
+                "MARCA VARCHAR(40)," +
+                "MODELO VARCHAR(40)," +
+                "COR VARCHAR(40)," +
+                "ATIVO BOOLEAN," +
+                "PLACA VARCHAR(7)," +
+                "VALORDOSEGURO FLOAT," +
+                "VALORDALOCACAO FLOAT);";
+
+        String sqllocacao= "CREATE TABLE IF NOT EXISTS LOCACAO(" +
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "NOME VARCHAR(40)," +
+                "MARCA VARCHAR(40)," +
+                "MODELO VARCHAR(40)," +
+                "COR VARCHAR(40)," +
+                "ATIVO BOOLEAN," +
+                "PLACA VARCHAR(7)," +
+                "VALORDOSEGURO FLOAT," +
+                "QUILOMETRAGEM FLOAT," +
+                "DATADELOCACAO DATE," +
+                "DATADEDEVOLUCAO DATE," +
+                "VALORDALOCACAO FLOAT);";
+
+        sqLiteDatabase.execSQL(sqlcliente);
+        sqLiteDatabase.execSQL(sqlfuncionario);
+        sqLiteDatabase.execSQL(sqlcarro);
+        sqLiteDatabase.execSQL(sqllocacao);
+
+
+
+
+
 
 
     }

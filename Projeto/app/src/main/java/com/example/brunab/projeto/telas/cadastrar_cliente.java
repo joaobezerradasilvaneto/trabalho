@@ -24,7 +24,7 @@ public class cadastrar_cliente extends AppCompatActivity {
      private EditText edCNH;
      private EditText edDependentes;
      database banco;
-     
+
 
 
     @Override
@@ -46,6 +46,7 @@ public class cadastrar_cliente extends AppCompatActivity {
         //banco
         banco = new database(this);
         db = banco.getWritableDatabase();
+        Toast.makeText(this,banco.getDatabaseName(),Toast.LENGTH_LONG).show();
 
     }
 
