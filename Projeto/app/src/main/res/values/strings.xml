@@ -19,5 +19,9 @@
     <string name="data_demiss_o">Data Demissão</string>
     <string name="data_admissao">Data Admissao</string>
     <string name="supervisor">Supervisor</string>
+    <string name="data_da_locacao">Data da Locacao</string>
+
+    <string name="quilimetragem">Quilimetragem</string>
+    <string name="data_de_devolucao">Data de Devolucao</string>
 
 </resources>
