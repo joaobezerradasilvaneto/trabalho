@@ -27,6 +27,10 @@ public class    MainActivity extends AppCompatActivity {
         Intent it = new Intent(MainActivity.this, tela_Funcionario.class);
         startActivity(it);
     }
+    public void telaLocacao(View view){
+        Intent it = new Intent(MainActivity.this, tela_locacao.class);
+        startActivity(it);
+    }
 
     public void sair(View view){
         finish();

@@ -5,8 +5,8 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:logo="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:logo="@mipmap/ic_launcher"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -19,7 +19,8 @@
         </activity>
         <activity android:name=".telas.cadastrar_cliente" />
         <activity android:name=".telas.tela_Funcionario" />
-        <activity android:name=".telas.tela_cadastro_carro"></activity>
+        <activity android:name=".telas.tela_cadastro_carro" />
+        <activity android:name=".telas.tela_locacao"></activity>
     </application>
 
 </manifest>

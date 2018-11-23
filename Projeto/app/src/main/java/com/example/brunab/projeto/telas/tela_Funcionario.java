@@ -75,20 +75,14 @@ public class tela_Funcionario extends AppCompatActivity {
             funcionario.setCpf(edCpf.getText().toString());
             funcionario.setEndereco(edEndereco.getText().toString());
             funcionario.setRg(edRG.getText().toString());
-            inserir();
+            inserirFuncionario();
             finish();
         }
-<<<<<<< HEAD
-        funcionario.setNome(edNome.getText().toString());
-        funcionario.setCpf(edCpf.getText().toString());
-        funcionario.setEndereco(edEndereco.getText().toString());
-        funcionario.setRg(edRG.getText().toString());
-        funcionario.setCargo(edcargo.getText().toString());
-        inserir();
-        finish();
+
+
     }
 
-    public void inserir(){
+    /*public void inserir(){
         ContentValues campos= new ContentValues();
         campos.put("NOME",funcionario.getNome());
         campos.put("RG",funcionario.getRg());
@@ -102,10 +96,10 @@ public class tela_Funcionario extends AppCompatActivity {
             db.update("Funcionario", campos, "IDFUNCIONARIO=?", new String[]{funcionario.getIdFuncionario()+""});
 
         db.close();
-=======
-    }
 
-    public void inserir(){
+    }
+*/
+    public void inserirFuncionario(){
 
         try {
             ContentValues campos = new ContentValues();
@@ -149,7 +143,7 @@ public class tela_Funcionario extends AppCompatActivity {
         }
 
         return true;
->>>>>>> 85777e67ce8d2fd76bd735987c20fdefd6fcaab7
+
     }
 
 
