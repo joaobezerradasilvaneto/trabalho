@@ -21,7 +21,7 @@
     <string name="supervisor">Supervisor</string>
     <string name="data_da_locacao">Data da Locacao</string>
 
-    <string name="quilimetragem">Quilimetragem</string>
     <string name="data_de_devolucao">Data de Devolucao</string>
+    <string name="quilometragem">Quilometragem</string>
 
 </resources>

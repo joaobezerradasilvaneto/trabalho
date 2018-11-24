@@ -27,4 +27,11 @@ public class tela_locacao extends AppCompatActivity {
         startActivity(it);
     }
 
+
+
+
+    public void acaoVoltar(View view){
+        finish();
+    }
+
 }

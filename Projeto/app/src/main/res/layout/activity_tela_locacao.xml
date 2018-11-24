@@ -44,7 +44,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="@string/quilimetragem"
+        android:hint="@string/quilometragem"
         android:inputType="numberDecimal"
         android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,6 +93,20 @@
         android:textColor="@color/corBranca"
         android:textColorHint="@color/colorPrimary"
         app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/round_corner_button"
+        android:onClick="acaoVoltar"
+        android:text="Voltar"
+        android:textColor="@color/corBranca"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
