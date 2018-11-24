@@ -21,9 +21,9 @@
         <activity android:name=".telas.tela_Funcionario" />
         <activity android:name=".telas.tela_cadastro_carro" />
         <activity android:name=".telas.tela_locacao" />
-        <activity android:name=".telas.listarlocacao" />
+        <activity android:name=".telas.listar_locacao" />
         <activity android:name=".telas.listar_cliente" />
-        <activity android:name=".telas.listar_funcionario"></activity>
+        <activity android:name=".telas.listar_veiculos"></activity>
     </application>
 
 </manifest>
