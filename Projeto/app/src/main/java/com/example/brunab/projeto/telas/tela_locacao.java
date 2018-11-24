@@ -27,7 +27,10 @@ public class tela_locacao extends AppCompatActivity {
         startActivity(it);
     }
 
-
+    public void listarLocacoes(View view){
+        Intent it = new Intent(tela_locacao.this, listar_locacao.class);
+        startActivity(it);
+    }
 
 
     public void acaoVoltar(View view){
