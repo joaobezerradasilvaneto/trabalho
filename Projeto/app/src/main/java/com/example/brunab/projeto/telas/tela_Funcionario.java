@@ -102,7 +102,7 @@ public class tela_Funcionario extends AppCompatActivity {
             if (funcionario.getIdFuncionario() <= 0)
                 db.insertOrThrow("FUNCIONARIO", null, campos);
             else
-                db.update("FUNCIONARIO", campos, "ID=?", new String[]{funcionario.getIdFuncionario() + ""});
+                db.update("IDFUNCIONARIO", campos, "ID=?", new String[]{funcionario.getIdFuncionario() + ""});
 
             db.close();
             Toast.makeText(getApplicationContext(),"Funcionário Salvo com Sucesso!",Toast.LENGTH_LONG).show();

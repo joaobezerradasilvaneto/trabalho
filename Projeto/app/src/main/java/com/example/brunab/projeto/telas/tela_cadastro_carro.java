@@ -84,7 +84,7 @@ public class tela_cadastro_carro extends AppCompatActivity {
                 db.insertOrThrow("CARRO", null, campos);
             else
                 db.update("CARRO", campos,
-                        "ID=?", new String[]{carro.getId() + ""});
+                        "IDCARRO=?", new String[]{carro.getId() + ""});
 
             db.close();
             Toast.makeText(getApplicationContext(),"Veículo salvo com sucesso!",Toast.LENGTH_LONG).show();

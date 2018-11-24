@@ -123,7 +123,7 @@ public class cadastrar_cliente extends AppCompatActivity {
             if(cliente.getId()<=0)
                 db.insertOrThrow("CLIENTE",null,campos);
             else
-                db.update("CLIENTE",campos,"ID=?",new String[]{cliente.getId()+""});
+                db.update("CLIENTE",campos,"IDCLIENTE=?",new String[]{cliente.getId()+""});
 
             db.close();
             Toast.makeText(getApplicationContext(),"Cliente salvo com sucesso!",Toast.LENGTH_LONG).show();

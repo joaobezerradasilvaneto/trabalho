@@ -69,7 +69,7 @@ public class database extends SQLiteOpenHelper{
         */
 
         String sqlcliente= "CREATE TABLE IF NOT EXISTS CLIENTE(" +
-                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "IDCLIENTE INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "NOME VARCHAR(40)," +
                 "NUMERODEDEPENDENTES INTEGER," +
                 "CNH VARCHAR(11)," +
@@ -78,7 +78,7 @@ public class database extends SQLiteOpenHelper{
                 "CPF VARCHAR(11));";
 
         String sqlfuncionario= "CREATE TABLE IF NOT EXISTS FUNCIONARIO(" +
-                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "IDFUNCIONARIO INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "NOME VARCHAR(40)," +
                 "SUPERVISOR BOOLEAN," +
                 "CNH VARCHAR(11)," +
@@ -89,7 +89,7 @@ public class database extends SQLiteOpenHelper{
                 "CPF VARCHAR(11));";
 
         String sqlcarro= "CREATE TABLE IF NOT EXISTS CARRO(" +
-                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "IDCARRO INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "NOME VARCHAR(40)," +
                 "MARCA VARCHAR(40)," +
                 "MODELO VARCHAR(40)," +
@@ -100,7 +100,7 @@ public class database extends SQLiteOpenHelper{
                 "VALORDALOCACAO FLOAT);";
 
         String sqllocacao= "CREATE TABLE IF NOT EXISTS LOCACAO(" +
-                "ID INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
+                "IDLOCACAO INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
                 "NOME VARCHAR(40)," +
                 "MARCA VARCHAR(40)," +
                 "MODELO VARCHAR(40)," +
